@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "payment-splitter"
+version = "0.1.0"
+description = ""
+authors = ["Andrew Tran <hello@andrewttran.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+SQLAlchemy = "^1.4.22"
+fastapi = "^0.68.0"
+pydantic = "^1.8.2"
+uvicorn = "^0.14.0"
+requests = "^2.26.0"
+gunicorn = "^20.1.0"
+psycopg2-binary = "^2.9.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+black = "^21.7b0"
+isort = "^5.9.3"
+flake8 = "^3.9.2"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
