@@ -1,17 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-import { Box, Button } from '@material-ui/core'
+import { Box, Typography } from '@material-ui/core';
 
-import { signOut } from '../../utils/auth'
-import { useAuth } from 'reactfire';
+import LogoutButton from '../auth/LogoutButton';
 
-
-export default function Header() {
-  const auth = useAuth()
-
+cosnst Header = () => {
   return (
-    <Box width="100%" display="flex" justifyContent="flex-end">
-      <Button onClick={() => signOut(auth)}>Sign Out</Button>
+    <Box width="100%" display="flex" justifyContent="space-between" p={2}>
+      <Box display="flex" alignItems="center">
+        <Typography>Payment Splitter</Typography>
+      </Box>
+      <Box display="flex" alignItems="center">
+        <LogoutButton />
+      </Box>
     </Box>
-  )
+  );
 }
+
+export default Header;
