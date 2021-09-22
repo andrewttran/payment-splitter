@@ -4,7 +4,7 @@ import { Box, Typography } from '@material-ui/core';
 
 import LogoutButton from '../auth/LogoutButton';
 
-cosnst Header = () => {
+const Header = () => {
   return (
     <Box width="100%" display="flex" justifyContent="space-between" p={2}>
       <Box display="flex" alignItems="center">
@@ -15,6 +15,6 @@ cosnst Header = () => {
       </Box>
     </Box>
   );
-}
+};
 
 export default Header;

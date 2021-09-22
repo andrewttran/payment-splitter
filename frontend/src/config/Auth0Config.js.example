@@ -1,4 +1,2 @@
-export const Auth0Config = {
-  domain: 'your-domain-here',
-  clientId: 'your-client-id-here',
-};
+export const domain = "your-domain-here";
+export const clientId = "your-client-id-here";

@@ -12,7 +12,6 @@ import Friends from './pages/Friends';
 import Group from './pages/Group';
 import Groups from './pages/Groups';
 import Home from './pages/Home';
-import Loading from './pages/Loading';
 import NewSplit from './pages/AddSplit';
 import history from './utils/history';
 
@@ -22,16 +21,6 @@ const onRedirectCallback = (appState) => {
 };
 
 const App = () => {
-  const { isLoading, error } = useAuth0();
-
-  if (error) {
-    return <div>Oops... {error.message}</div>;
-  }
-
-  if (isLoading) {
-    return <Loading />;
-  }
-
   return (
     <Auth0Provider
       domain={domain}
@@ -47,7 +36,6 @@ const App = () => {
           <ProtectedRoute path="/friend/:username" component={Friend} />
           <ProtectedRoute path="/friends" component={Friends} />
           <Route path="/" component={Home} />
-          <Redirect to="/" />
         </Switch>
       </Router>
     </Auth0Provider>
